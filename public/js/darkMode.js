@@ -14,8 +14,13 @@ function changeTheme() {
     if (currentTheme === "light") {
         targetTheme = "dark";
         document.getElementById("darkmodeBtn").checked = true
+        document.getElementById('icon-theme-sun').style.display = 'none'
+        document.getElementById('icon-theme-moon').style.display = 'block'
+        
     } else {
         document.getElementById("darkmodeBtn").checked = false
+        document.getElementById('icon-theme-sun').style.display = 'block'
+        document.getElementById('icon-theme-moon').style.display = 'none'
     }
 
     document.documentElement.setAttribute('data-theme', targetTheme)
