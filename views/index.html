@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <title>Drag and Drop</title>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
-    <script src="/public/js/common.js"></script>
+    <script src="/public/js/darkMode.js"></script>
     <link rel="stylesheet" href="/public/css/styles.css" />
   </head>
   <body>
     <nav class="nav-main">
         <div class="theme">
             <label class="switch">
-                <input id="darkmodeBtn" type="checkbox" checked>
+                <input id="darkmodeBtn" type="checkbox" onchange="changeTheme()" checked>
                 <span class="slider round"></span>
             </label>
             <div class="moon-sun">
