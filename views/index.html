@@ -5,6 +5,7 @@
     <title>Drag and Drop</title>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     <script src="/public/js/darkMode.js"></script>
+    <script src="/public/js/main.js"></script>
     <link rel="stylesheet" href="/public/css/styles.css" />
   </head>
   <body>
@@ -22,8 +23,8 @@
     </nav>
     <main>
         <div class="div-table">
-            <h1>Conquistas:</h1>
-            <table class="styled-table noselect">
+            <h1>reward:</h1>
+            <table id="main-table" class="styled-table noselect">
                 <tr>
                   <th>1</th>
                   <th>2</th>
@@ -58,9 +59,12 @@
     <footer>
         <p>Author: <strong>@Luiggi Antonni</strong><br>
         <nav>
-            <a href="https://github.com/LuiggiAntonni?tab=repositories"><iconify-icon icon="akar-icons:github-fill"></iconify-icon></a>
-            <a href="https://www.linkedin.com/in/luiggi-antonni-di-stefano-caldas/"><iconify-icon icon="akar-icons:linkedin-box-fill"></iconify-icon></a>
+            <a href="https://github.com/LuiggiAntonni?tab=repositories" target="_blank" rel="author"><iconify-icon icon="akar-icons:github-fill"></iconify-icon></a>
+            <a href="https://www.linkedin.com/in/luiggi-antonni-di-stefano-caldas/" target="_blank" rel="author"><iconify-icon icon="akar-icons:linkedin-box-fill"></iconify-icon></a>
         </nav>
       </footer>
+      <script>
+        setMode(storedTheme)
+      </script>
   </body>
 </html>

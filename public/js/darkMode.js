@@ -13,18 +13,28 @@ function changeTheme() {
 
     if (currentTheme === "light") {
         targetTheme = "dark";
-        document.getElementById("darkmodeBtn").checked = true
-        document.getElementById('icon-theme-sun').style.display = 'none'
-        document.getElementById('icon-theme-moon').style.display = 'block'
+        setMode(targetTheme)
         
     } else {
-        document.getElementById("darkmodeBtn").checked = false
-        document.getElementById('icon-theme-sun').style.display = 'block'
-        document.getElementById('icon-theme-moon').style.display = 'none'
+        setMode(targetTheme)
     }
 
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);
     
     return targetTheme;
+}
+
+function setMode(theme) {
+    console.log(document.getElementById("darkmodeBtn"));
+    if (theme === "dark") {
+        document.getElementById("darkmodeBtn").checked = true
+        document.getElementById('icon-theme-sun').style.display = 'none'
+        document.getElementById('icon-theme-moon').style.display = 'block'
+    }
+    else {
+        document.getElementById("darkmodeBtn").checked = false
+        document.getElementById('icon-theme-sun').style.display = 'block'
+        document.getElementById('icon-theme-moon').style.display = 'none'
+    }
 }

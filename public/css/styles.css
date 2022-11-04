@@ -49,22 +49,22 @@ a {
   color: var(--link-color);
 }
 
-a:after {    
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: var(--white);
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
-  a:hover:after { 
-    width: 100%; 
-    left: 0; 
-  }
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--white);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
 
 /* nav-main */
 
@@ -147,16 +147,17 @@ input:checked + .slider:before {
 }
 
 .theme .moon-sun {
-    display: flex;
-    align-items: center;
+  transition: all 0.3s ease-in;
+  display: flex;
+  align-items: center;
 }
 
-.theme .moon-sun iconify-icon{
-    position: absolute;
+.theme .moon-sun iconify-icon {
+  position: absolute;
 }
 
 #icon-theme-sun {
-    display: none;
+  display: none;
 }
 
 /* fim nav-main */
@@ -203,6 +204,18 @@ input:checked + .slider:before {
 
 .styled-table tbody tr:last-of-type {
   border-bottom: 2px solid var(--green);
+}
+
+.draggable-div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.over-draggable-div {
+  background: var(--green);
 }
 
 footer {
