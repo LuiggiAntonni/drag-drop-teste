@@ -1,0 +1,237 @@
+:root {
+  --green: #009879;
+  --grey: #ccc;
+  --white: #fff;
+}
+
+html[data-theme="light"] {
+  --background-color: #fff;
+  --alternate-background-color: #f7f7f9;
+  --text-color: #121416d8;
+  --link-color: #3fd7a2;
+  --button-color: #12a73c;
+}
+
+html[data-theme="dark"] {
+  --background-color: #212a2e;
+  --alternate-background-color: #7a7a7a;
+  --text-color: #f7f8f8;
+  --link-color: #3fd7a2;
+  --button-color: #12a73c;
+}
+
+html {
+  height: 100%;
+}
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--white);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/* nav-main */
+
+.nav-main {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: space-around;
+}
+
+.theme {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  transform: scale(0.5);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--grey);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--background-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--link-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--link-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.theme .moon-sun {
+  transition: all 0.3s ease-in;
+  display: flex;
+  align-items: center;
+}
+
+.theme .moon-sun iconify-icon {
+  position: absolute;
+}
+
+#icon-theme-sun {
+  display: none;
+}
+
+/* fim nav-main */
+
+.div-table {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.div-table h1 {
+  text-transform: uppercase;
+  font-size: medium;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  table-layout: fixed;
+  width: 80%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table th {
+  height: 2em;
+}
+
+.styled-table td {
+  text-align: center;
+  width: 50%;
+  height: 5em;
+  cursor: grab;
+}
+
+.styled-table td:active {
+  background-color: var(--alternate-background-color);
+  cursor: grabbing;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--green);
+}
+
+.draggable-div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.over-draggable-div {
+  background: var(--green);
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  min-height: 70px;
+  text-align: center;
+  line-height: 1.5em;
+  background-color: var(--green);
+  color: var(--white);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: stretch;
+}
